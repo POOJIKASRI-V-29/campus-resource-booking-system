@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create Resource</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<script>
+  if (localStorage.getItem("role") !== "admin") {
+    alert("Access denied. Admins only.");
+    window.location.href = "login.html";
+  }
+</script>
+
+<body>
+
+  <div class="container">
+    <h2>Create Resource</h2>
+
+    <input id="rid" placeholder="Resource ID">
+    <input id="type" placeholder="Type">
+    <input id="cap" type="number" placeholder="Capacity">
+
+    <button onclick="createResource()">Create</button>
+    <p id="msg"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
